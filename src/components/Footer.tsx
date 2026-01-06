@@ -66,7 +66,9 @@ export default function Footer() {
                 <Facebook className="text-[#b1b1b1] group-hover:text-[#25f4ee]" size={20} />
               </a>
               <a
-                href="https://www.facebook.com/Ecomchains/"
+                href="https://www.upwork.com/freelancers/~01d25294e18fdf2132?mp_source=share"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#111111] border border-white/10 p-3 rounded-xl hover:border-[#25f4ee]/50 transition group"
               >
                 <Briefcase className="text-[#b1b1b1] group-hover:text-[#25f4ee]" size={20} />
