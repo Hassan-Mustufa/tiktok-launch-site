@@ -1,468 +1,61 @@
-import React, { useEffect } from 'react';
-import { Check, ArrowRight } from 'lucide-react';
-import AOS from 'aos';
+import { ArrowUpRight } from 'lucide-react';
 
-const ServicesPage = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
-  }, []);
-
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('contact-form');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+export default function Services() {
   const services = [
-    { id: 1, title: 'DTC Brands Launch' },
-    { id: 2, title: 'Private Label Business Launch' },
-    { id: 3, title: 'Wholesale Business Launch' },
-    { id: 4, title: 'Dropship Business Launch' },
-    { id: 5, title: 'Product Syncing for Platforms' },
-    { id: 6, title: 'TikTok Shop Business Consultations' },
+    { id: '01', title: 'DTC Brands Launch' },
+    { id: '02', title: 'Private Label Business Launch' },
+    { id: '03', title: 'Wholesale Business Launch' },
+    { id: '04', title: 'Dropship Business Launch' },
+    { id: '05', title: 'Product Syncing for Platforms' },
+    { id: '06', title: 'TikTok Shop Business Consultations' }
   ];
 
   return (
-    <div className="min-h-screen bg-[#070707]">
-      {/* Breadcrumb Section */}
-      <section className="pt-32 pb-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-gray-400 text-center mb-2">
-            TikTok Launch <span style={{ color: '#25f4ee' }}>Services One</span>
-          </p>
+    <section id="services" className="bg-[#070707] py-24 relative overflow-hidden">
+      {/* Background Vertical Lines from Screenshot */}
+      <div className="absolute inset-0 grid grid-cols-6 pointer-events-none opacity-10">
+        {[...Array(6)].map((_, i) => (
+          <div key={i} className="border-r border-white/10 h-full"></div>
+        ))}
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="text-center mb-16">
+          <p className="text-gray-500 uppercase tracking-[0.2em] text-xs mb-4">Popular Services</p>
+          <h2 className="text-5xl font-bold text-white tracking-tight">
+            Special Services for <span className="text-[#25f4ee]">TikTok Shop</span>
+          </h2>
         </div>
-      </section>
 
-      {/* Hero Section - DTC Brands Feature */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left - Images and Icon */}
-            <div className="relative" data-aos="fade-right">
-              <div className="relative h-96">
-                {/* Asterisk Icon */}
-                <div className="absolute -left-12 top-1/2 transform -translate-y-1/2 z-10">
-                  <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                    <text x="50" y="70" fontSize="80" fill="#25f4ee" textAnchor="middle" fontWeight="bold">
-                      *
-                    </text>
-                  </svg>
-                </div>
-
-                {/* Dashboard Screenshots Container */}
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-gray-900 to-black rounded-lg p-4 border border-gray-800 shadow-2xl">
-                    <div className="bg-black rounded h-80 flex items-center justify-center border border-gray-700">
-                      <div className="text-center text-gray-500">
-                        <p className="text-sm">Dashboard Screenshots</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Lower Asterisk Icon */}
-                <div className="absolute -bottom-8 -right-12 opacity-50">
-                  <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
-                    <text x="50" y="70" fontSize="80" fill="#25f4ee" textAnchor="middle" fontWeight="bold">
-                      *
-                    </text>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            {/* Right - Content */}
-            <div data-aos="fade-left">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Launching <span style={{ color: '#25f4ee' }}>DTC Brands</span>
-                <br />
-                On TikTok Shop
-              </h2>
-
-              <p className="text-gray-400 mb-8 text-lg leading-relaxed">
-                Transform your challenges into profitable business opportunities
-              </p>
-
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <div className="w-6 h-6 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0" style={{ backgroundColor: '#25f4ee' }}>
-                    <Check className="w-4 h-4 text-black" />
-                  </div>
-                  <span className="text-gray-300">Scaling DTC Brands</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-6 h-6 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0" style={{ backgroundColor: '#25f4ee' }}>
-                    <Check className="w-4 h-4 text-black" />
-                  </div>
-                  <span className="text-gray-300">Boosting Wholesale Business</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-6 h-6 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0" style={{ backgroundColor: '#25f4ee' }}>
-                    <Check className="w-4 h-4 text-black" />
-                  </div>
-                  <span className="text-gray-300">Selling on TikTok Shop Consultations</span>
-                </div>
-              </div>
-
-              <button
-                onClick={scrollToContact}
-                style={{ backgroundColor: '#F33E7B' }}
-                className="px-8 py-3 rounded-full font-semibold text-white hover:opacity-90 transition-all inline-flex items-center gap-2"
-              >
-                Learn More <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Special Services Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16" data-aos="fade-up">
-            <p className="text-gray-400 mb-2">Popular Services</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Special Services for <span style={{ color: '#25f4ee' }}>TikTok Shop</span>
-            </h2>
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {services.map((service, index) => (
-              <div
-                key={service.id}
-                className="bg-black border border-gray-800 rounded-lg p-8 hover:border-[#25f4ee] transition-all group cursor-pointer"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-6">
-                    <span className="text-4xl font-bold text-gray-600" style={{ color: '#25f4ee', opacity: 0.3 }}>
-                      {String(service.id).padStart(2, '0')}
-                    </span>
-                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                  </div>
-                  <button
-                    style={{ backgroundColor: '#F33E7B' }}
-                    className="w-12 h-12 rounded-full flex items-center justify-center text-white hover:opacity-90 transition-all flex-shrink-0"
-                  >
-                    <ArrowRight className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16" data-aos="fade-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Amazing <span style={{ color: '#25f4ee' }}>Pricing</span> For Your Projects
-            </h2>
-          </div>
-
-          {/* Pricing Cards */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
-            {/* DTC Brands Business Launch */}
+        {/* 2-Column Grid of Dark Cards */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {services.map((service, idx) => (
             <div
-              className="bg-black border border-gray-800 rounded-lg p-8 hover:border-[#25f4ee] transition-all"
+              key={service.id}
               data-aos="fade-up"
-              data-aos-delay="100"
+              data-aos-delay={`${idx * 100}`}
+              className="bg-[#111111] border border-white/5 p-8 rounded-2xl flex justify-between items-center group hover:bg-[#161616] transition-all cursor-pointer shadow-xl"
             >
-              <h3 className="text-xl font-bold text-white mb-2">DTC Brands Business Launch</h3>
-              <p className="text-gray-400 text-sm mb-6">Become DTC with TikTok Shop</p>
-
-              <div className="mb-6">
-                <span className="text-4xl font-bold" style={{ color: '#25f4ee' }}>$3500</span>
-                <span className="text-gray-400 text-sm"> /per month</span>
+              <div className="flex items-center gap-12">
+                {/* Numbering */}
+                <span className="text-gray-500 font-mono text-xl">{service.id}</span>
+                {/* Title */}
+                <h3 className="text-white text-2xl font-bold tracking-tight">
+                  {service.title}
+                </h3>
               </div>
-
-              <div className="mb-8">
-                <p className="text-white font-semibold mb-4">What would you like best?</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>Affiliate Marketing & Shop Ads</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>Brand Handle & Scaling</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>Optimization & Analytics</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>Sales & Revenue Tracking</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>Competition & Best Practices</span>
-                  </li>
-                </ul>
-              </div>
-
-              <button
-                onClick={scrollToContact}
-                className="w-full bg-transparent border border-gray-700 text-white py-3 rounded-lg hover:border-[#25f4ee] hover:bg-[#25f4ee] hover:text-black transition-all"
-              >
-                Click To Retrieve →
+              
+              {/* Pink Arrow Button */}
+              <button 
+                onClick={() => window.location.href = '#home'} 
+                className="w-12 h-12 rounded-full bg-[#F33E7B] flex items-center justify-center transition-transform group-hover:rotate-45 shadow-lg shadow-[#F33E7B]/20"
+              >  
+                <ArrowUpRight className="text-white" size={24} />
               </button>
             </div>
-
-            {/* Wholesale Business Launch */}
-            <div
-              className="bg-black border-2 border-[#25f4ee] rounded-lg p-8 relative md:scale-105 hover:scale-110 transition-transform"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-[#25f4ee] text-black text-xs font-bold px-4 py-1 rounded-full">
-                  MOST POPULAR
-                </span>
-              </div>
-
-              <h3 className="text-xl font-bold text-white mb-2">Wholesale Business Launch</h3>
-              <p className="text-gray-400 text-sm mb-6">Become B2B with Wholesale Business on TikTok</p>
-
-              <div className="mb-6">
-                <span className="text-4xl font-bold" style={{ color: '#25f4ee' }}>15%</span>
-                <span className="text-gray-400 text-sm"> or Customized LOI serve</span>
-              </div>
-
-              <div className="mb-8">
-                <p className="text-white font-semibold mb-4">What would you like best?</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>Essential Branded Products</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>Authorization Certificate</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>Inventory Management</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>Essential Partnership</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>Scalability & Compliance</span>
-                  </li>
-                </ul>
-              </div>
-
-              <button
-                onClick={scrollToContact}
-                className="w-full text-black py-3 rounded-lg transition-all font-semibold"
-                style={{ backgroundColor: '#25f4ee' }}
-              >
-                Click To Retrieve →
-              </button>
-            </div>
-
-            {/* Consultation */}
-            <div
-              className="bg-black border border-gray-800 rounded-lg p-8 hover:border-[#25f4ee] transition-all"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <h3 className="text-xl font-bold text-white mb-2">Consultation</h3>
-              <p className="text-gray-400 text-sm mb-6">Accounting Business, e-branding and Marketing</p>
-
-              <div className="mb-6">
-                <span className="text-4xl font-bold" style={{ color: '#25f4ee' }}>$100</span>
-                <span className="text-gray-400 text-sm"> /per 30 minutes</span>
-              </div>
-
-              <div className="mb-8">
-                <p className="text-white font-semibold mb-4">What would you like best?</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>All Growth 1:1 Video Session</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>Direct Access To TikTok Shop</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>Brand Growth Strategies</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>For Entrepreneurs, Brand Owners &amp; Business</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-sm">
-                    <Check className="w-5 h-5 mr-2 flex-shrink-0" style={{ color: '#25f4ee' }} />
-                    <span>TikTok Shop Account Review</span>
-                  </li>
-                </ul>
-              </div>
-
-              <button
-                onClick={scrollToContact}
-                className="w-full bg-transparent border border-gray-700 text-white py-3 rounded-lg hover:border-[#25f4ee] hover:bg-[#25f4ee] hover:text-black transition-all"
-              >
-                Click To Retrieve →
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section id="contact-form" className="py-20 px-4 bg-black">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Left Column - Info */}
-            <div data-aos="fade-right">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Let's Talk for Your <span style={{ color: '#25f4ee' }}>TikTok</span> Business
-              </h2>
-              <p className="text-gray-400 mb-8">
-                Transform your challenges into solutions with our expert team. We'll analyze your TikTok Shop presence and create a strategic plan for sustainable growth.
-              </p>
-
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="w-6 h-6 rounded-full flex items-center justify-center mr-3 mt-1" style={{ backgroundColor: '#25f4ee' }}>
-                    <span className="text-black text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold">1+ Years of Experience</h4>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="w-6 h-6 rounded-full flex items-center justify-center mr-3 mt-1" style={{ backgroundColor: '#25f4ee' }}>
-                    <span className="text-black text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold">Trusted DTC Brands</h4>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="w-6 h-6 rounded-full flex items-center justify-center mr-3 mt-1" style={{ backgroundColor: '#25f4ee' }}>
-                    <span className="text-black text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold">Successfully Wholesale Businesses</h4>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="w-6 h-6 rounded-full flex items-center justify-center mr-3 mt-1" style={{ backgroundColor: '#25f4ee' }}>
-                    <span className="text-black text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold">Setting up a TikTok Shop Consultations</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column - Form */}
-            <div data-aos="fade-left">
-              <form className="space-y-4">
-                <div>
-                  <label htmlFor="full-name" className="block text-sm font-medium text-gray-400 mb-2">
-                    Full Name*
-                  </label>
-                  <input
-                    type="text"
-                    id="full-name"
-                    className="w-full bg-[#070707] border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#25f4ee] transition-colors"
-                    placeholder="Your name"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
-                    Email Address*
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full bg-[#070707] border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#25f4ee] transition-colors"
-                    placeholder="your@email.com"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-400 mb-2">
-                    Phone Number*
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className="w-full bg-[#070707] border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#25f4ee] transition-colors"
-                    placeholder="+1 (555) 000-0000"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="plan-type" className="block text-sm font-medium text-gray-400 mb-2">
-                    Plan Type*
-                  </label>
-                  <select
-                    id="plan-type"
-                    className="w-full bg-[#070707] border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#25f4ee] transition-colors"
-                    required
-                  >
-                    <option value="">Select a plan</option>
-                    <option value="dtc">DTC Brands Business Launch</option>
-                    <option value="wholesale">Wholesale Business Launch</option>
-                    <option value="consultation">Consultation</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
-                    Message/Questions*
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full bg-[#070707] border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#25f4ee] transition-colors resize-none"
-                    placeholder="Tell us about your project..."
-                    required
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-4 rounded-lg font-semibold text-black transition-all hover:opacity-90"
-                  style={{ backgroundColor: '#25f4ee' }}
-                >
-                  Submit Message →
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
-};
-
-export default ServicesPage;
+}
