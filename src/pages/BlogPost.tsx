@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { ArrowLeft, Calendar, User, ArrowRight } from 'lucide-react';
 import AOS from 'aos';
 
+
 interface BlogPostData {
   id: number;
   title: string;
@@ -436,6 +437,9 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen bg-[#070707]">
+      <Helmet>
+        <title>{post.title}</title>
+      </Helmet>
       {/* Header */}
       <div className="fixed w-full top-0 z-40 bg-[#070707]/90 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
