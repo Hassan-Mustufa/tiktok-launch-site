@@ -35,7 +35,7 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center space-x-8 text-white font-medium">
           <a href="/" className="hover:text-[#25f4ee] transition-colors">Home</a>
-          <a href="/services" className="hover:text-[#25f4ee] transition-colors">Services</a>
+          <a href="/#services" className="hover:text-[#25f4ee] transition-colors">Services</a>
           <a href="/#about" className="hover:text-[#25f4ee] transition-colors">About</a>
           <button onClick={() => navigate('/blog')} className="hover:text-[#25f4ee] transition-colors">Blog</button>
           <button onClick={() => navigate('/consultation')} className="hover:text-[#25f4ee] transition-colors">Consultation</button>
@@ -55,7 +55,7 @@ const Header = () => {
       {isMenuOpen && (
         <nav className="absolute top-full left-0 w-full bg-black text-white flex flex-col items-center space-y-4 py-4">
           <a href="/" className="hover:text-[#25f4ee] transition-colors">Home</a>
-          <a href="/services" className="hover:text-[#25f4ee] transition-colors">Services</a>
+          <a href="/#services" className="hover:text-[#25f4ee] transition-colors">Services</a>
           <a href="/#about" className="hover:text-[#25f4ee] transition-colors">About</a>
           <button onClick={() => { navigate('/blog'); setIsMenuOpen(false); }} className="hover:text-[#25f4ee] transition-colors">Blog</button>
           <button onClick={() => { navigate('/consultation'); setIsMenuOpen(false); }} className="hover:text-[#25f4ee] transition-colors">Consultation</button>
