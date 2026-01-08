@@ -35,7 +35,7 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center space-x-8 text-white font-medium">
           <a href="/" className="hover:text-[#25f4ee] transition-colors">Home</a>
-          <a href="/#services" className="hover:text-[#25f4ee] transition-colors">Services</a>
+          <button onClick={() => navigate('/services')} className="hover:text-[#25f4ee] transition-colors">Services</button>
           <a href="/#about" className="hover:text-[#25f4ee] transition-colors">About</a>
           <button onClick={() => navigate('/blog')} className="hover:text-[#25f4ee] transition-colors">Blog</button>
           <button onClick={() => navigate('/consultation')} className="hover:text-[#25f4ee] transition-colors">Consultation</button>
