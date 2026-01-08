@@ -27,26 +27,20 @@ const ServicesPage = () => {
           {/* Key Services */}
           <div className="grid md:grid-cols-3 gap-8 mb-20" data-aos="fade-up" data-aos-delay="200">
             <div className="bg-black border border-gray-800 rounded-lg p-6 text-center">
-              <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ backgroundColor: 'rgba(37, 244, 238, 0.1)' }}>
-                <span className="text-3xl" style={{ color: '#25f4ee' }}>📈</span>
-              </div>
+              <img src="/public/pl SS.jpg" alt="Scaling DTC Brands" className="w-full h-auto rounded-lg mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Scaling DTC Brands</h3>
               <p className="text-gray-400 text-sm">Growing your direct-to-consumer brand presence on TikTok Shop</p>
             </div>
 
             <div className="bg-black border border-gray-800 rounded-lg p-6 text-center">
-              <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ backgroundColor: 'rgba(37, 244, 238, 0.1)' }}>
-                <span className="text-3xl" style={{ color: '#25f4ee' }}>🚀</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Boosting Wholesale Business</h3>
-              <p className="text-gray-400 text-sm">Expanding your wholesale operations with strategic partnerships</p>
+              <img src="/public/Affiliate.jpeg" alt="Boosting Wholesale Business" className="w-full h-auto rounded-lg mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Affiliate</h3>
+              <p className="text-gray-400 text-sm">Expanding your brand with Affiliate</p>
             </div>
 
             <div className="bg-black border border-gray-800 rounded-lg p-6 text-center">
-              <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ backgroundColor: 'rgba(37, 244, 238, 0.1)' }}>
-                <span className="text-3xl" style={{ color: '#25f4ee' }}>💡</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Selling on TikTok Shop Consultations</h3>
+              <img src="/public/3.jpg" alt="Selling on TikTok Shop Consultations" className="w-full h-auto rounded-lg mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">$1M Revenue Accelerator</h3>
               <p className="text-gray-400 text-sm">Expert guidance for launching and optimizing your TikTok Shop</p>
             </div>
           </div>
