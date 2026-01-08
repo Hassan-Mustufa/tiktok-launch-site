@@ -25,7 +25,7 @@ const Header = () => {
         <div className="flex-shrink-0">
           <a href="/" className="block">
           <img
-              src="/public/final logo.png"
+              src="final logo.png"
               alt="TokLaunch Logo"
               className="min-h-[100px] w-auto block h-auto scale-150 origin-left"
               style={{ height: '100px' }}
