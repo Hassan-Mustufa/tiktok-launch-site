@@ -27,19 +27,19 @@ const ServicesPage = () => {
           {/* Key Services */}
           <div className="grid md:grid-cols-3 gap-8 mb-20" data-aos="fade-up" data-aos-delay="200">
             <div className="bg-black border border-gray-800 rounded-lg p-6 text-center">
-              <img src="/public/pl SS.jpg" alt="Scaling DTC Brands" className="w-full h-auto rounded-lg mb-4" />
+              <img src="pl SS.jpg" alt="Scaling DTC Brands" className="w-full h-auto rounded-lg mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Scaling DTC Brands</h3>
               <p className="text-gray-400 text-sm">Growing your direct-to-consumer brand presence on TikTok Shop</p>
             </div>
 
             <div className="bg-black border border-gray-800 rounded-lg p-6 text-center">
-              <img src="/public/Affiliate.jpeg" alt="Boosting Wholesale Business" className="w-full h-auto rounded-lg mb-4" />
+              <img src="Affiliate.jpeg" alt="Boosting Wholesale Business" className="w-full h-auto rounded-lg mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Affiliate</h3>
               <p className="text-gray-400 text-sm">Expanding your brand with Affiliate</p>
             </div>
 
             <div className="bg-black border border-gray-800 rounded-lg p-6 text-center">
-              <img src="/public/3.jpg" alt="Selling on TikTok Shop Consultations" className="w-full h-auto rounded-lg mb-4" />
+              <img src="3.jpg" alt="Selling on TikTok Shop Consultations" className="w-full h-auto rounded-lg mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">$1M Revenue Accelerator</h3>
               <p className="text-gray-400 text-sm">Expert guidance for launching and optimizing your TikTok Shop</p>
             </div>
